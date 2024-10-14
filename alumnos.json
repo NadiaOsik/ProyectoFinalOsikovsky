@@ -1,0 +1,12 @@
+[
+    {"nombre": "Natalia", "nota1": 6, "nota2": 8, "nota3": 7, "materia": "geografia", "promedio": 7},
+    {"nombre": "Olga", "nota1": 9, "nota2": 6, "nota3": 7, "materia": "geografia", "promedio": 7},
+    {"nombre": "Roberto", "nota1": 10, "nota2": 9, "nota3": 8, "materia": "ingles", "promedio": 9},
+    {"nombre": "Ana", "nota1": 8, "nota2": 4, "nota3": 9, "materia": "ingles", "promedio": 7},
+    {"nombre": "José", "nota1": 8, "nota2": 9, "nota3": 7, "materia": "matematicas", "promedio": 8},
+    {"nombre": "María", "nota1": 5, "nota2": 7, "nota3": 6, "materia": "matematicas", "promedio": 6},
+    {"nombre": "Jorge", "nota1": 5, "nota2": 9, "nota3": 7, "materia": "matematicas", "promedio": 7},
+    {"nombre": "Marcos", "nota1": 10, "nota2": 9, "nota3": 8, "materia": "literatura", "promedio": 9},
+    {"nombre": "Marta", "nota1": 8, "nota2": 8, "nota3": 9, "materia": "literatura", "promedio": 8},
+    {"nombre": "Federico", "nota1": 6, "nota2": 8, "nota3": 7, "materia": "literatura", "promedio": 7}    
+]

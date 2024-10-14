@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final Osikovsky</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-container">
+        <h1>Simulador de promedios y mejores alumnos</h1>
+        <div class="cnt-materias">
+            <h2>Seleccione una materia para ingresar las notas</h2>
+            <div class="materias">
+                <div class="btn matematicas" id="matematicas">
+                    <p>Matemáticas</p>
+                </div>
+                <div class="btn ingles" id="ingles">
+                    <p>Inglés</p>
+                </div>
+                <div class="btn literatura" id="literatura">
+                    <p>Literatura</p>
+                </div>
+                <div class="btn geografia" id="geografia">
+                    <p>Geografía</p>
+                </div>
+            </div>
+            <button type="button" id="cargaJSON">Ver datos predeterminados</button>
+        </div>
+        <div class="cnt-form">
+            <h2>Ingrese los datos de los alumnos</h2>
+            <form id="form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre">
+                <span id="errorNombre"></span>
+                <label for="nota1">Nota 1° Trimestre:</label>
+                <input type="text" id="nota1" class="notas">
+                <span id="errorNota1"></span>
+                <label for="nota2">Nota 2° Trimestre:</label>
+                <input type="text" id="nota2" class="notas">
+                <span id="errorNota2"></span>
+                <label for="nota3">Nota 3° Trimestre:</label>
+                <input type="text" id="nota3" class="notas">
+                <span id="errorNota3"></span>
+                <button type="submit" id="submit">Guardar</button>
+            </form>
+        </div>
+        <div class="cnt-resultados">
+            <h2>Información Ingresada</h2>
+            <div id="resultados">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Alumno</th>
+                            <th>1° Trim</th>
+                            <th>2° Trim</th>
+                            <th>3° Trim</th>
+                            <th>Promedio</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaResultados"></tbody>
+                </table>
+            </div>
+            <div class="buttons">
+                <button type="button" id="btnMejorAlumno">Ver mejores alumnos</button>
+                <button type="button" id="btnBorrarTodo">Borrar datos ingresados</button>
+            </div>
+            <div class="mejor-alumno"></div>
+        </div>
+        <div id="cntVolver">
+            <button type="button" id="btnVolver"><span class="material-symbols-outlined">arrow_back</span>Volver a la selección de materias</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>

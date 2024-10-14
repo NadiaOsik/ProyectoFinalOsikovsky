@@ -1,0 +1,98 @@
+/* Estilos generales */
+*,
+*::before,
+*::after { margin: 0; padding: 0; box-sizing: border-box; font-family: "Roboto", sans-serif;  }
+ol, ul { list-style: none; }
+a { text-decoration: none; display: block; }
+body { height: 100vh; padding: 0!important; width: 100vw; display: flex; align-items: center; background-color: #fffbed; background-image: url("https://www.transparenttextures.com/patterns/old-wall.png"); overflow-x: hidden; }
+
+/* Título y subtítulos */
+h1 { font-family: "Great Vibes", cursive; font-size: 50px; font-weight: 500; }
+h2 { text-align: center; font-weight: 500; font-size: 20px; padding: 30px; }
+
+/* Variables Degradados */
+:root { --bg-mat: linear-gradient(45deg,#c9c5fc98,#ffffff80,#c9c5fc98); --bg-ing: linear-gradient(45deg,#ffbebea2,#ffffff80,#ffbebea2); --bg-lit: linear-gradient(45deg,#ffefc99e,#ffffff80,#ffefc99e); --bg-geo: linear-gradient(45deg,#a2ddfca2,#ffffff80,#a2ddfca2); }
+
+/* Contenedor principal */
+#main-container { margin: auto; height: 100vh; padding: 50px 30px; display: flex; flex-wrap: wrap; background: none; flex-direction: row; gap: 30px; align-content: center; justify-content: center; }
+#main-container h1 { width: 100%; text-align: center; }
+
+/* Backgrounds form y resultados */
+.matematicas #form,
+.matematicas #resultados { background: var(--bg-mat); }
+.ingles #form,
+.ingles #resultados { background: var(--bg-ing); }
+.literatura #form,
+.literatura #resultados { background: var(--bg-lit); }
+.geografia #form,
+.geografia #resultados { background: var(--bg-geo); }
+
+/* Tablas */
+tbody, thead, th, tr, td { border: 0; }
+th { font-size: 16px; font-weight: 600; }
+td { font-size: 14px; font-weight: 400; }
+th, td { min-width: 100px; text-align: left; padding: 5px 15px; } 
+
+/* Materias */
+.cnt-materias { display: flex; flex-direction: column; justify-content: center; }
+.cnt-materias.ocultar { display: none; }
+.materias { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.materias .btn { padding: 20px 40px; font-size: 18px; border-radius: 10px; cursor: pointer; color: black; font-weight: 600; box-shadow: 0 2px 5px rgba(0,0,0,0.3); }
+.materias p { pointer-events: none; }
+.matematicas { background: var(--bg-mat); }
+.ingles { background: var(--bg-ing); }
+.literatura { background: var(--bg-lit); }
+.geografia { background: var(--bg-geo); }
+
+/* Btn volver */
+#cntVolver { width: 100%; display: none; text-align: center; }
+#cntVolver.mostrar { display: block; background: none; }
+#btnVolver { width: fit-content; border: none; background: none; margin: 30px auto 0; display: flex; align-items: center; text-align: center; cursor: pointer; font-size: 20px; font-weight: 500; padding: 10px 20px; }
+#btnVolver span { margin-right: 5px; }
+
+/* Botón precarga JSON */
+#cargaJSON { padding: 15px 30px; background: linear-gradient(45deg,#fab88f74,#ffffff99,#fab88f74); box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); border-radius: 10px; font-weight: 600; font-size: 16px; color: black; border: none; cursor: pointer; margin: 60px auto 0; }
+
+/* Formulario */
+.cnt-form { display: none; }
+.cnt-form.mostrar { display: block; }
+#form { background: linear-gradient(45deg,#eeeeee,white); border-radius: 7px; padding: 30px; display: flex; flex-direction: column; box-shadow: -2px 2px 5px rgba(0,0,0,0.2); }
+#form span { color: red; font-size: 12px; font-weight: 500; margin-bottom: 15px; margin-top: 5px; margin-left: 3px;  }
+#form input { line-height: 30px; padding: 5px 10px; font-size: 14px; border: 1px solid #cacaca; border-radius: 7px; }
+#form label { margin-bottom: 5px; font-size: 14px; font-weight: 600; margin-left: 3px; }
+#form button { margin: 20px 0 10px; border: none; font-weight: 600; cursor: pointer; line-height: 20px; padding: 10px 20px; border-radius: 7px; color: white; }
+
+/* Colores botón guardar */
+.matematicas #form button { background-color: #836cb1; }
+.ingles #form button { background-color: #dc8b8b; }
+.literatura #form button { background-color: #bc936b; }
+.geografia #form button { background-color: #5999bc; }
+
+/* Resultados */
+.cnt-resultados { display: none; }
+.cnt-resultados.mostrar { display: block; }
+.cnt-resultados #resultados { border-radius: 7px; margin-bottom: 25px; padding: 30px; display: flex; flex-direction: column; box-shadow: -2px 2px 5px rgba(0,0,0,0.2); }
+.cnt-resultados #btnMejorAlumno.ocultar { display: none; }
+.cnt-resultados #btnBorrarTodo.ocultar { display: none; }
+.cnt-resultados #btnMejorAlumno { display: inline-block; }
+.cnt-resultados #btnBorrarTodo { display: inline-block; background-color: #a92626; margin-left: auto; } 
+.cnt-resultados .buttons { display: flex; column-gap: 20px; }
+.cnt-resultados .buttons button { border: none; padding: 10px 20px; width: 50%; margin-bottom: 25px; font-weight: 600; cursor: pointer; line-height: 20px; border-radius: 7px; color: white; }
+
+/* Sección mejores alumnos */
+.mejor-alumno { display: none; }
+.mejor-alumno.mostrar { display: block; }
+.mejor-alumno p { padding: 35px 45px; font-size: 14px; font-weight: 400; box-shadow: 0 2px 5px rgba(0,0,0,0.2); display: block; border-radius: 7px; }
+.mejor-alumno p span { font-weight: 600; }
+
+/* Background mejores alumnos */
+.matematicas .cnt-resultados #btnMejorAlumno { background-color: #836cb1; }
+.ingles .cnt-resultados #btnMejorAlumno { background-color: #dc8b8b; }
+.literatura .cnt-resultados #btnMejorAlumno { background-color: #bc936b; }
+.geografia .cnt-resultados #btnMejorAlumno { background-color: #5999bc; }
+
+/* Background resultado mejores alumnos */
+.matematicas .mejor-alumno p { background: var(--bg-mat); }
+.ingles .mejor-alumno p { background: var(--bg-ing); }
+.literatura .mejor-alumno p { background: var(--bg-lit); }
+.geografia .mejor-alumno p { background: var(--bg-geo); }
